@@ -90,11 +90,5 @@ func MangleURL(url string) (string, error) {
 }
 
 func CreateURL(host, user, repo string) (string, error) {
-	if host == "github.com" {
-		return fmt.Sprintf("https://%s/%s/%s", host, user, repo), nil
-	} else if host == "bitbucket.org" {
-		return fmt.Sprintf("https://%s/%s/%s", host, user, repo), nil
-	} else {
-		return "", fmt.Errorf("invalid github or bitbucket host: %s", host)
-	}
+        return fmt.Sprintf("https://%s/%s/%s", host, user, repo), nil
 }
